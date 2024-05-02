@@ -1,0 +1,57 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="video.txt">
+  </head>
+
+  <style>
+    *{
+        background-color: blue;
+        text-align: center;
+        margin-top: 27px;
+    }
+    #carousel{
+        height: 300px;
+        width: 50%;
+    }
+  </style>
+  <body>
+    <h1 style="color: white; font-size: 40px;"></h1>
+    <button onClick="start()" style="background-color: whitesmoke;">Start Timer</button>
+    <button onClick="stop()" style="background-color: whitesmoke;">Stop Timer</button>
+    <br><br><br>
+    <img id="carousel" src="" alt="">
+  </body>
+</html>
+
+<script>
+  let i = 0;
+  let id
+  function start() {
+     id = setInterval(function () {
+      i++;
+      console.log(i);
+      document.querySelector("h1").innerText = i;
+    }, 1000);
+  }
+
+  function stop() {
+    clearInterval(id);
+    // document.querySelector("h1").innerText = "Timer stopped";
+  }
+
+      let currentIndex = 0;
+let images = ["https://cdn.shopify.com/s/files/1/0070/7032/files/rohn-quote.png?v=1706739779.jpg", "https://marketplace.canva.com/EAFsBbvUqGM/1/0/1600w/canva-pastel-pink-bold-minimalist-self-love-quote-instagram-post-GfAZw1Fh7zg.jpg", "https://i.pinimg.com/236x/8b/57/a8/8b57a85616fcad535ecd85ee1b87b129.jpg"];
+
+setInterval(function() {
+    currentIndex = (currentIndex + 1) % images.length;
+    document.getElementById("carousel").src = images[currentIndex];
+}, 3000);
+
+</script>
+
+
+
