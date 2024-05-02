@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    class Vehicle {
+    constructor(make, model) {
+        this.make = make;
+        this.model = model;
+    }
+    getInfo() {
+        return `Make: ${this.make}, Model: ${this.model}`;
+    }
+}
+
+class Car extends Vehicle {
+    constructor(make, model, year) {
+        super(make, model);
+        this.year = year;
+    }
+    getInfo() {
+        return `${super.getInfo()}, Year: ${this.year}`;
+    }
+}
+
+let myCar = new Car('Toyota', 'Camry', 2020);
+console.log(myCar.getInfo());
+
+</script>
+
+
+<!-- EXPLANATION
+
+INPUT :
+
+Vehicle Class:
+- The Vehicle class is defined with a constructor that takes two parameters: make and model.
+- Inside the constructor, the make and model properties of the instance are set to the values passed to the
+constructor.
+- It also has a method getInfo() that returns a string containing the make and model of the vehicle.
+
+Car Class:
+- The Car class is a subclass of Vehicle. It inherits all the properties and methods of the Vehicle class. 
+- The Car class also has a constructor that takes three parameters: make, model, and year.
+- Inside the constructor, the super() method is called to call the constructor of the parent class (Vehicle)
+with the make and model parameters.
+- The year property is then set to the value passed to the constructor.
+- The getInfo() method overrides the getInfo() method of the parent class. It returns a string containing the 
+maken and model of the vehicle, as well as the year.
+
+- The myCar variable is initialized with a new Car object with the make, model, and year parameters.
+- The getInfo() method of the myCar object is called, which returns a string containing the make, model, and year of the car.
+
+
+OUTPUT : Make: Toyota, Model: Camry, Year: 2
+-->

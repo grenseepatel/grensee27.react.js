@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    class Shape {
+    constructor(color) {
+        this.color = color;
+    }
+    getColor() {
+        return this.color;
+    }
+}
+
+class Circle extends Shape {
+    constructor(color, radius) {
+        super(color);
+        this.radius = radius;
+    }
+}
+
+class ColoredCircle extends Circle {
+    constructor(color, radius) {
+        super(color, radius);
+    }
+}
+
+let coloredCircle = new ColoredCircle('blue', 5);
+console.log(coloredCircle.getColor());
+
+</script>
+
+<!-- EXPLANATION
+
+INPUT :
+
+- The super keyword is used to call the constructor of the parent class. It is used to access the properties and methods of the parent class. 
+- Here, The super keyword is used to call the constructor of the Shape class and initialize the color property
+- Then the super keyword is used to call the constructor of the Circle class and initialize the color and radius properties
+- Then the super keyword is used to call the constructor of the ColoredCircle class and initialize the color, radius, and color properties
+- The getColor() method is used to return the value of the color property.
+- The coloredCircle variable is initialized with a new instance of the ColoredCircle class, which is a child class of the
+- Circle class and a child class of the Shape class. The color property is initialized with the value 'blue' and the radius
+  property is initialized with the value 5.
+- The getColor() method is called on the coloredCircle object, which returns the value of the color property, which is 'blue'.
+
+
+OUTPUT : blue
+    
+-->

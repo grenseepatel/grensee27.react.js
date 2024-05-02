@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+    speak() {
+        console.log(`${this.name} makes a noise.`);
+    }
+}
+
+class Dog extends Animal {
+    speak() {
+        console.log(`${this.name} barks.`);
+    }
+}
+
+let dog = new Dog('Buddy');
+dog.speak();
+</script>
+
+<!-- EXPLANATION
+
+ INPUT :
+
+ -  The Animal class has a constructor that takes a name parameter and assigns it to the instance property 
+  this.name.
+ -  It also has a method speak() which simply logs a message saying that the animal makes a noise, using 
+  the name property.
+ - The Dog class overrides the speak() method of the Animal class. 
+ - Then creates a new instance of the Dog class with the name 'Buddy'.
+ - Since Dog extends Animal, it automatically calls the constructor of Animal to initialize the name property.
+ - Since Dog has its own speak() method, this method is called instead of the one defined in Animal.
+ - As a result, the message "Buddy barks." is logged to the console.
+
+
+ OUTPUT : Buddy barks.
+-->
