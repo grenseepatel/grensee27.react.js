@@ -1,0 +1,113 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    width: 100%;
+}
+@media (max-width: 600px){
+    #information
+    {
+       display: grid;
+       grid-template-rows: repeat(3,1fr);
+       grid-gap: 5px;
+       padding-top: 2%;
+    }
+   .box{
+       border: 1px solid navy;
+       padding: 3% 25px;
+       box-shadow: 2px 2px 5px 5px black;
+       
+   }
+   .text  
+   {
+     text-align: center;
+     color: black;
+     font-weight: 30px;
+   }
+}
+@media (min-width: 601px) and (max-width: 768px){
+    #information
+     {
+        display: grid;
+        grid-template-rows: repeat(3,1fr);
+        grid-gap: 5px;
+        padding-top: 2%;
+     }
+    .box{
+        border: 1px solid navy;
+        padding: 3% 25px;
+        box-shadow: 2px 2px 5px 5px black;
+        
+    }
+    .text  
+    {
+      text-align: center;
+      color: black;
+    }
+}
+
+
+
+@media (min-width: 769px) and (max-width: 992px){
+    #information
+    {
+       display: grid;
+       grid-template-columns: repeat(3,1fr);
+       grid-gap: 5px;
+       padding-top: 2%;
+    }
+   .box{
+       border: 1px solid navy;
+       padding: 3% 25px;
+       box-shadow: 2px 2px 5px 5px black;
+       
+   }
+   .text  
+   {
+     text-align: center;
+     color: black;     
+   }
+}
+
+
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    #information
+    {
+       display: grid;
+       grid-template-columns: repeat(3,1fr);
+       grid-gap: 5px;
+       padding-top: 2%;
+    }
+   .box{
+       border: 1px solid navy;
+       padding: 3% 25px;
+       box-shadow: 2px 2px 5px 5px black;
+       
+   }
+   .text  
+   {
+     text-align: center;
+     color: black;
+   }
+}
+@media (min-width: 1201px) {
+    #information
+    {
+       display: grid;
+       grid-template-columns: repeat(3,1fr);
+       grid-gap: 5px;
+       padding-top: 2%;
+    }
+   .box{
+       border: 1px solid navy;
+       padding: 3% 25px;
+       box-shadow: 2px 2px 5px 5px black;
+       
+   }
+   .text  
+   {
+     text-align: center;
+     color: black;
+   }
+}
