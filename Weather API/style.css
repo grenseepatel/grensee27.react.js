@@ -1,0 +1,141 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+@media (max-width: 600px){
+    #information
+    {
+       display: grid;
+       grid-template-rows: repeat(3,1fr);
+       gap: 2%;
+       padding-top: 2%;
+    }
+   .box{
+       border: 1px solid navy;
+       height: 400px;
+       width: 300px;
+       padding: 3% 25px;
+       box-shadow: 1px 1px 1px 3px black;
+       img{
+        height: 250px;
+        width: 250px;
+       }
+   }
+   .title  
+   {
+     text-align: center;
+     color: black;
+     font-weight: 30px;
+   }
+}
+@media (min-width: 601px) and (max-width: 768px){
+    #information
+     {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 2%;
+        padding-top: 2%;
+        text-align: center;
+     }
+    .box{
+        border: 1px solid navy;
+        height: 400px;
+        width: 300px;
+        padding: 3% 25px;
+        box-shadow: 2px 2px 5px 5px black;
+        img{
+            height: 250px;
+            width: 250px;
+           } 
+    }
+    .title  
+    {
+      text-align: center;
+      color: black;
+    }
+}
+
+
+
+@media (min-width: 769px) and (max-width: 992px){
+    #information
+    {
+       display: grid;
+       grid-template-columns: repeat(3,1fr);
+       gap: 8%;
+       padding-top: 2%;
+    }
+   .box{
+       border: 1px solid navy;
+       height: 350px;
+       width: 250px;
+       padding: 3% 25px;
+       box-shadow: 2px 2px 5px 5px black;
+       img{
+        height: 200px;
+        width: 200px;
+       }
+       
+   }
+   .title  
+   {
+     text-align: center;
+     color: black;     
+   }
+}
+
+
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    #information
+    {
+       display: grid;
+       grid-template-columns: repeat(3,1fr);
+       gap: 10% 30%;
+       padding-top: 2%;
+    }
+   .box{
+       border: 1px solid navy;
+       height: 400px;
+       width: 300px;
+       padding: 3% 25px;
+       box-shadow: 2px 2px 5px 5px black;
+       img{
+        height: 250px;
+        width: 250px;
+       }
+       
+   }
+   .title  
+   {
+     text-align: center;
+     color: black;
+   }
+}
+@media (min-width: 1201px) {
+    #information
+    {
+       display: grid;
+       grid-template-columns: repeat(3,1fr);
+       gap: 10% 20%;
+       padding-top: 2%;
+    }
+   .box{
+       border: 1px solid navy;
+       height: 450px;
+       width: 360px;
+       padding: 3% 25px;
+       box-shadow: 2px 2px 5px 5px black;
+       img{
+        height: 300px;
+        width: 300px;
+       }
+       
+   }
+   .title  
+   {
+     text-align: center;
+     color: black;
+   }
+}
