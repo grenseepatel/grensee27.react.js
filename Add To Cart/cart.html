@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>cart page</h1>
+    <div id="mainSection"></div>
+</body>
+</html>
+
+<script>
+    function Fetchdata(){
+    fetch("https://add-to-cart-backend-i1je.onrender.com/cart")
+    .then((res)=>res.json())
+    .then((data)=>{
+        CardList(data)
+        productdata=data
+    })
+    .catch((err)=>console.log(err))
+}
+Fetchdata()
+
+function CardList(data){
+   const store=data.map((el)=>Card(el.id,el.image,el.title,el.price,el.founder,el.category,el.description))
+   document.getElementById("mainSection").innerHTML=store.join("");
+}
+
+
+function Card(id,image,title,price,founder,category,description){
+   let SingleCard=`
+   <a href="description.html?title=${encodeURIComponent(title)}&image=${encodeURIComponent(image)}&founder=${encodeURIComponent(founder)}&category=${encodeURIComponent(category)}&price=${encodeURIComponent(price)}&description=${encodeURIComponent(description)}">
+   <div class="card" data-id=${id}>
+   <div class="card-img">
+     <img src=${image} alt="pitch">
+   </div>
+   <div class="card-body">
+     <h4 class="card-title">${title}</h4>
+     <p class="card-founder">Founder:${founder}</p>
+     <p class="card-category">${category}</p>
+     <p class="card-price">${price}</p>
+     <button class="card-button" data-id=${id}>Delete</button>
+   </div>
+ </div>
+ </a>
+   `
+
+   return SingleCard
+}
+
+
+//### DELETE PART ###
+
+document.addEventListener("click",(e)=>{
+    if(e.target.classList.contains("card-button")){
+        DeleteProduct(e.target.dataset.id)
+    }
+})
+
+function DeleteProduct(id){
+    fetch(`https://add-to-cart-backend-i1je.onrender.com/cart/${id}`,{
+        method:"DELETE"
+    }).then((res)=>res.json())
+    .then((data)=>{
+        alert("deleted...")
+        console.log(data)
+    })
+    .catch((err)=>console.log(err))
+}
+</script>
